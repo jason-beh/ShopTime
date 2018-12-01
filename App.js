@@ -1,49 +1,108 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React from 'react';
+import { View, Text, TouchableOpacity, Button } from 'react-native';
+import {
+  createNavigator,
+  SwitchRouter,
+  createNavigationContainer,
+  SceneView
+} from 'react-navigation';
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+class Screen1 extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <View>
+        <Text> Screen1 </Text>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+class Screen2 extends React.Component {
+  render() {
+    return (
+      <View>
+        <Text> Screen2 </Text>
+      </View>
+    );
+  }
+}
+
+class Screen3 extends React.Component {
+  render() {
+    return (
+      <View>
+        <Text> Screen3 </Text>
+      </View>
+    );
+  }
+}
+
+class Screen4 extends React.Component {
+  render() {
+    return (
+      <View>
+        <Text> Screen4 </Text>
+      </View>
+    );
+  }
+}
+
+const styles = {
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    alignItems: 'center'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  tab: {
+    height: 56,
+    alignSelf: 'stretch',
+    position: 'absolute',
+    bottom: 0,
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  txt: {
+    padding: 20,
+    fontSize: 15
+  }
+};
+function createCustomNavigator(routeConfigMap, config = {}) {
+  let router = SwitchRouter(routeConfigMap, config);
+  let NavigatorComponent = createNavigator(NavigationView, router, config);
+  return createNavigationContainer(NavigatorComponent);
+}
+class NavigationView extends React.Component {
+  componentDidMount() {
+    console.log('componentDidMount', this.props);
+  }
+  render() {
+    let { state } = this.props.navigation;
+    let activeKey = state.routes[state.index].key;
+    let descriptor = this.props.descriptors[activeKey];
+    let ScreenComponent = descriptor.getComponent();
+    return (
+      <View style={{ flex: 1 }}>
+        <SceneView
+          component={ScreenComponent}
+          navigation={descriptor.navigation}
+          screenProps={this.props.screenProps}
+        />
+        <View style={styles.tab}>
+          {state.routes.map(({ routeName, key }) => (
+            <Button
+              key={key}
+              onPress={() => this.props.navigation.navigate(routeName)}
+              title={routeName}
+            />
+          ))}
+        </View>
+      </View>
+    );
+  }
+}
+export default createCustomNavigator({
+  Screen1,
+  Screen2,
+  Screen3,
+  Screen4
 });
