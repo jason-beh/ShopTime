@@ -1,51 +1,16 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Button } from 'react-native';
+import { View, Text, TouchableOpacity, Button, Dimensions } from 'react-native';
 import {
   createNavigator,
   SwitchRouter,
-  createNavigationContainer,
+  createAppContainer,
   SceneView
 } from 'react-navigation';
+import Home from './src/screens/Home.js';
+import Categories from './src/screens/Categories.js';
+import Brands from './src/screens/Brands.js';
 
-class Screen1 extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text> Screen1 </Text>
-      </View>
-    );
-  }
-}
-
-class Screen2 extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text> Screen2 </Text>
-      </View>
-    );
-  }
-}
-
-class Screen3 extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text> Screen3 </Text>
-      </View>
-    );
-  }
-}
-
-class Screen4 extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text> Screen4 </Text>
-      </View>
-    );
-  }
-}
+let width = Dimensions.get('window').width;
 
 const styles = {
   container: {
@@ -55,21 +20,19 @@ const styles = {
   },
   tab: {
     height: 56,
-    alignSelf: 'stretch',
-    position: 'absolute',
-    bottom: 0,
+    width: width,
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
-  txt: {
-    padding: 20,
-    fontSize: 15
+  tabText: {
+    background: 'white',
+    fontColor: 'black'
   }
 };
 function createCustomNavigator(routeConfigMap, config = {}) {
   let router = SwitchRouter(routeConfigMap, config);
   let NavigatorComponent = createNavigator(NavigationView, router, config);
-  return createNavigationContainer(NavigatorComponent);
+  return createAppContainer(NavigatorComponent);
 }
 class NavigationView extends React.Component {
   componentDidMount() {
@@ -82,27 +45,29 @@ class NavigationView extends React.Component {
     let ScreenComponent = descriptor.getComponent();
     return (
       <View style={{ flex: 1 }}>
+        <View style={styles.tab}>
+          {state.routes.map(({ routeName, key }) => (
+            <TouchableOpacity
+              key={key}
+              onPress={() => this.props.navigation.navigate(routeName)}
+              title={routeName}
+              style={styles.tabText}
+            >
+              <Text>{routeName}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
         <SceneView
           component={ScreenComponent}
           navigation={descriptor.navigation}
           screenProps={this.props.screenProps}
         />
-        <View style={styles.tab}>
-          {state.routes.map(({ routeName, key }) => (
-            <Button
-              key={key}
-              onPress={() => this.props.navigation.navigate(routeName)}
-              title={routeName}
-            />
-          ))}
-        </View>
       </View>
     );
   }
 }
 export default createCustomNavigator({
-  Screen1,
-  Screen2,
-  Screen3,
-  Screen4
+  Home,
+  Categories,
+  Brands
 });
