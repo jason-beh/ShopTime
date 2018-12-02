@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Button, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, Picker, Dimensions } from 'react-native';
 import {
   createNavigator,
   SwitchRouter,
@@ -9,8 +9,7 @@ import {
 import Home from './src/screens/Home.js';
 import Categories from './src/screens/Categories.js';
 import Brands from './src/screens/Brands.js';
-
-let width = Dimensions.get('window').width;
+import AppHeader from './src/components/AppHeader.js';
 
 const styles = {
   container: {
@@ -19,14 +18,20 @@ const styles = {
     alignItems: 'center'
   },
   tab: {
-    height: 56,
-    width: width,
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
   tabText: {
-    background: 'white',
-    fontColor: 'black'
+    fontFamily: 'Montserrat-Bold',
+    color: 'black',
+    fontSize: 10,
+    padding: 45,
+    paddingBottom: 17,
+    paddingTop: 17
+  },
+  tabTextActive: {
+    borderBottomWidth: 2,
+    borderBottomColor: '#0070D6'
   }
 };
 function createCustomNavigator(routeConfigMap, config = {}) {
@@ -35,9 +40,6 @@ function createCustomNavigator(routeConfigMap, config = {}) {
   return createAppContainer(NavigatorComponent);
 }
 class NavigationView extends React.Component {
-  componentDidMount() {
-    console.log('componentDidMount', this.props);
-  }
   render() {
     let { state } = this.props.navigation;
     let activeKey = state.routes[state.index].key;
@@ -45,15 +47,20 @@ class NavigationView extends React.Component {
     let ScreenComponent = descriptor.getComponent();
     return (
       <View style={{ flex: 1 }}>
+        <AppHeader />
         <View style={styles.tab}>
           {state.routes.map(({ routeName, key }) => (
             <TouchableOpacity
               key={key}
               onPress={() => this.props.navigation.navigate(routeName)}
-              title={routeName}
-              style={styles.tabText}
             >
-              <Text>{routeName}</Text>
+              {routeName == activeKey ? (
+                <Text style={[styles.tabText, styles.tabTextActive]}>
+                  {routeName.toUpperCase()}
+                </Text>
+              ) : (
+                <Text style={styles.tabText}>{routeName.toUpperCase()}</Text>
+              )}
             </TouchableOpacity>
           ))}
         </View>
