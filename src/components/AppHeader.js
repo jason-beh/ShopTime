@@ -34,8 +34,8 @@ export class AppHeader extends Component {
             }}
             mode="dialog"
           >
-            <Picker.Item label="MEN" value="men" color="#212224" />
             <Picker.Item label="WOMEN" value="women" color="#212224" />
+            <Picker.Item label="MEN" value="men" color="#212224" />
           </Picker>
         </View>
         <View style={styles.headerColumn}>

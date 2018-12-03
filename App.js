@@ -23,7 +23,7 @@ const styles = {
   },
   tabText: {
     fontFamily: 'Montserrat-Bold',
-    color: 'black',
+    color: '#999999',
     fontSize: 10,
     padding: 45,
     paddingBottom: 17,
@@ -31,7 +31,8 @@ const styles = {
   },
   tabTextActive: {
     borderBottomWidth: 2,
-    borderBottomColor: '#0070D6'
+    borderBottomColor: '#0070D6',
+    color: 'black'
   }
 };
 function createCustomNavigator(routeConfigMap, config = {}) {
