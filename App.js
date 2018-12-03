@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Picker, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import {
   createNavigator,
   SwitchRouter,

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, Picker, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { connect } from 'react-redux';
+import { changeGender } from '../actions/gender';
 
 export class AppHeader extends Component {
   state = {
@@ -19,9 +21,9 @@ export class AppHeader extends Component {
           />
           <Picker
             onValueChange={(itemValue, itemIndex) =>
-              this.setState({ gender: itemValue })
+              this.props.changeGender(itemValue)
             }
-            selectedValue={this.state.gender}
+            selectedValue={this.props.gender}
             style={{
               width: 130,
               height: 60,
@@ -52,6 +54,20 @@ export class AppHeader extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    gender: state.gender.gender
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    changeGender: gender => {
+      dispatch(changeGender(gender));
+    }
+  };
+};
+
 const styles = StyleSheet.create({
   header: {
     justifyContent: 'space-between',
@@ -78,4 +94,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AppHeader;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AppHeader);
