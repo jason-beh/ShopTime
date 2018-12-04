@@ -1,7 +1,7 @@
 import { CHANGE_GENDER } from '../actions/types';
 
 const initialState = {
-  gender: ''
+  gender: 'women'
 };
 
 const genderReducer = (state = initialState, action) => {

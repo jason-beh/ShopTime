@@ -24,7 +24,7 @@ const styles = {
   tabText: {
     fontFamily: 'Montserrat-Bold',
     color: '#999999',
-    fontSize: 10,
+    fontSize: 11,
     padding: 45,
     paddingBottom: 17,
     paddingTop: 17
