@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Text, View, Picker, StyleSheet } from 'react-native';
+import { Text, View, Picker, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import { changeGender } from '../actions/gender';
+import { withNavigation } from 'react-navigation';
 
 export class AppHeader extends Component {
   state = {
@@ -13,12 +14,6 @@ export class AppHeader extends Component {
     return (
       <View style={styles.header}>
         <View style={styles.headerColumn}>
-          <Icon
-            name="ios-menu"
-            size={32}
-            color="#212224"
-            style={styles.menuIcon}
-          />
           <Picker
             onValueChange={(itemValue, itemIndex) =>
               this.props.changeGender(itemValue)
@@ -43,11 +38,21 @@ export class AppHeader extends Component {
         <View style={styles.headerColumn}>
           <Icon name="ios-heart-empty" size={26} color="#212224" />
           <Icon
-            name="ios-search"
+            name="ios-cart"
             size={26}
             color="#212224"
-            style={styles.searchIcon}
+            style={styles.cartIcon}
           />
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Search')}
+          >
+            <Icon
+              name="ios-search"
+              size={26}
+              color="#212224"
+              style={styles.searchIcon}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -73,7 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
-    padding: 20,
+    padding: 15,
     paddingTop: 10,
     paddingBottom: 10
   },
@@ -87,14 +92,15 @@ const styles = StyleSheet.create({
     color: 'blue'
   },
   searchIcon: {
-    marginLeft: 30
+    marginLeft: 20,
+    marginRight: 15
   },
-  menuIcon: {
-    marginRight: 20
+  cartIcon: {
+    marginLeft: 20
   }
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AppHeader);
+)(withNavigation(AppHeader));

@@ -4,12 +4,14 @@ import {
   createNavigator,
   SwitchRouter,
   createAppContainer,
-  SceneView
+  SceneView,
+  createStackNavigator
 } from 'react-navigation';
-import Home from './src/screens/Home.js';
+import Featured from './src/screens/Home.js';
 import Categories from './src/screens/Categories.js';
 import Brands from './src/screens/Brands.js';
 import AppHeader from './src/components/AppHeader.js';
+import Search from './src/screens/Search.js';
 
 const styles = {
   container: {
@@ -74,8 +76,36 @@ class NavigationView extends React.Component {
     );
   }
 }
-export default createCustomNavigator({
-  Home,
+
+let HomeTabs = createCustomNavigator({
+  Featured,
   Categories,
   Brands
 });
+
+export default createAppContainer(
+  createStackNavigator(
+    {
+      Home: {
+        screen: HomeTabs,
+        navigationOptions: {
+          header: null
+        }
+      },
+      Search: {
+        screen: Search,
+        navigationOptions: {
+          title: 'Search',
+          headerTitleStyle: {
+            fontFamily: 'Montserrat-Medium',
+            color: 'black',
+            fontSize: 18
+          }
+        }
+      }
+    },
+    {
+      headerMode: 'screen'
+    }
+  )
+);
