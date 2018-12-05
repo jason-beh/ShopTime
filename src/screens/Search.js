@@ -10,13 +10,9 @@ import {
   Dimensions
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import ProductCard from '../components/ProductCard';
 
 let { data } = require('../data/data.json');
-
-let imageWidth = (Dimensions.get('window').width - 40 - 20) / 2;
-function getImageHeight(imageWidth) {
-  return (imageWidth * 523) / 392;
-}
 
 export class Search extends Component {
   state = {
@@ -48,63 +44,21 @@ export class Search extends Component {
               />
             </TouchableOpacity>
           </View>
-          <Text style={styles.searchResults}>
+          <Text style={styles.searchResultsText}>
             {data.length} Items found
             {this.state.searchTerm.length == 0
               ? ''
               : ` for "${this.state.searchTerm}"`}
           </Text>
-          <View style={styles.productRow}>
+          <View style={styles.searchResultsContainer}>
             {data.map((product, index) => {
               return (
-                <TouchableOpacity key={index}>
-                  <View style={styles.product}>
-                    <Image
-                      source={{ uri: product.imageUrl }}
-                      style={styles.productImage}
-                    />
-                    <View style={styles.productPriceFavourite}>
-                      <Text style={styles.productPrice}>
-                        $ {product.promo_price}
-                      </Text>
-                      <TouchableOpacity>
-                        <Icon
-                          name="ios-heart-empty"
-                          size={30}
-                          color="#212224"
-                          style={styles.searchIcon}
-                        />
-                      </TouchableOpacity>
-                    </View>
-                    <Text style={styles.productName}>{product.name}</Text>
-                  </View>
-                </TouchableOpacity>
-              );
-            })}
-            {data.map((product, index) => {
-              return (
-                <TouchableOpacity key={index}>
-                  <View style={styles.product}>
-                    <Image
-                      source={{ uri: product.imageUrl }}
-                      style={styles.productImage}
-                    />
-                    <View style={styles.productPriceFavourite}>
-                      <Text style={styles.productPrice}>
-                        $ {product.promo_price}
-                      </Text>
-                      <TouchableOpacity>
-                        <Icon
-                          name="ios-heart-empty"
-                          size={30}
-                          color="#212224"
-                          style={styles.searchIcon}
-                        />
-                      </TouchableOpacity>
-                    </View>
-                    <Text style={styles.productName}>{product.name}</Text>
-                  </View>
-                </TouchableOpacity>
+                <ProductCard
+                  key={index}
+                  name={product.name}
+                  imageUrl={product.imageUrl}
+                  price={product.promo_price}
+                />
               );
             })}
           </View>
@@ -127,40 +81,17 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     marginRight: 4
   },
-  searchResults: {
+  searchResultsText: {
     color: '#999999',
     fontFamily: 'Montserrat-Regular',
     alignSelf: 'center',
     marginTop: 30
   },
-  product: {
-    marginTop: 30
-  },
-  productImage: {
-    width: imageWidth,
-    height: getImageHeight(imageWidth),
-    borderRadius: 10
-  },
-  productPrice: {
-    fontFamily: 'Montserrat-Bold',
-    fontSize: 16
-  },
-  productRow: {
+  searchResultsContainer: {
     justifyContent: 'space-between',
     flexDirection: 'row',
     flex: 1,
     flexWrap: 'wrap'
-  },
-  productPriceFavourite: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 15
-  },
-  productName: {
-    fontFamily: 'Montserrat-Regular',
-    fontSize: 16,
-    marginTop: 5
   }
 });
 
