@@ -16,11 +16,31 @@
       ],
       "washing_instructions": "Cold Hand Wash for preserving its optimum condition",
       "materials": "100% Cotton",
-      "imageUrl": "https://res.cloudinary.com/duzwrihzb/image/upload/v1543987596/product_dfyv0w.png",
+      "imageUrl": "https://res.cloudinary.com/duzwrihzb/image/upload/v1544004396/ShopTime1.png",
       "sizes": {
         "S": 2,
         "M": 3,
         "L": 1
+      }
+    },
+    {
+      "product_id": 2,
+      "isNewItem": false,
+      "gender": "women",
+      "type": "hat",
+      "name": "Black Beanie",
+      "promo_price": 29.99,
+      "ori_price": 39.99,
+      "description": [
+        "A warm wool cashmere beanie",
+        "Made using high quality wool",
+        "Solid black color"
+      ],
+      "washing_instructions": "Hand Wash",
+      "materials": "70% wool, 30% cashmere",
+      "imageUrl": "https://res.cloudinary.com/duzwrihzb/image/upload/v1544004493/ShopTime2.png",
+      "sizes": {
+        "M": 2
       }
     }
   ]
