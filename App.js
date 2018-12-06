@@ -12,6 +12,7 @@ import Categories from './src/screens/Categories.js';
 import Brands from './src/screens/Brands.js';
 import AppHeader from './src/components/AppHeader.js';
 import Search from './src/screens/Search.js';
+import Product from './src/screens/Product.js';
 
 const styles = {
   container: {
@@ -94,6 +95,9 @@ export default createAppContainer(
         navigationOptions: {
           title: 'Search'
         }
+      },
+      Product: {
+        screen: Product
       }
     },
     {

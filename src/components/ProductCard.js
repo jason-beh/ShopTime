@@ -8,16 +8,23 @@ import {
   Image
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { withNavigation } from 'react-navigation';
 
 let imageWidth = (Dimensions.get('window').width - 40 - 20) / 2;
 function getImageHeight(imageWidth) {
   return (imageWidth * 523) / 392;
 }
 
-export default class ProductCard extends Component {
+class ProductCard extends Component {
   render() {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() =>
+          this.props.navigation.navigate('Product', {
+            data: this.props.product
+          })
+        }
+      >
         <View style={styles.productCard}>
           <Image
             source={{ uri: this.props.imageUrl }}
@@ -66,3 +73,5 @@ const styles = StyleSheet.create({
     marginTop: 5
   }
 });
+
+export default withNavigation(ProductCard);

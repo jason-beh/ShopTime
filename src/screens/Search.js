@@ -66,6 +66,7 @@ export class Search extends Component {
             {data.map((product, index) => {
               return (
                 <ProductCard
+                  product={product}
                   key={index}
                   name={product.name}
                   imageUrl={product.imageUrl}
