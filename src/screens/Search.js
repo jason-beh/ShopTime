@@ -5,12 +5,11 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  Image,
-  ScrollView,
-  Dimensions
+  ScrollView
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ProductCard from '../components/ProductCard';
+import { withNavigation } from 'react-navigation';
 
 let { data } = require('../data/data.json');
 
@@ -23,6 +22,19 @@ export class Search extends Component {
     return (
       <ScrollView>
         <View style={{ margin: 20 }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginBottom: 30
+            }}
+          >
+            <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+              <Icon name="ios-arrow-round-back" size={44} color="#212224" />
+            </TouchableOpacity>
+
+            <Text style={styles.headerBackTitle}>Search</Text>
+          </View>
           <View
             style={{
               flexDirection: 'row',
@@ -69,6 +81,12 @@ export class Search extends Component {
 }
 
 const styles = StyleSheet.create({
+  headerBackTitle: {
+    fontFamily: 'Montserrat-Bold',
+    marginLeft: 30,
+    fontSize: 18,
+    color: '#212224'
+  },
   searchInput: {
     height: 40,
     flex: 1,
@@ -95,4 +113,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Search;
+export default withNavigation(Search);

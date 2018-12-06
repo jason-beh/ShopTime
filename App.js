@@ -87,25 +87,17 @@ export default createAppContainer(
   createStackNavigator(
     {
       Home: {
-        screen: HomeTabs,
-        navigationOptions: {
-          header: null
-        }
+        screen: HomeTabs
       },
       Search: {
         screen: Search,
         navigationOptions: {
-          title: 'Search',
-          headerTitleStyle: {
-            fontFamily: 'Montserrat-Medium',
-            color: 'black',
-            fontSize: 18
-          }
+          title: 'Search'
         }
       }
     },
     {
-      headerMode: 'screen'
+      headerMode: 'none'
     }
   )
 );
