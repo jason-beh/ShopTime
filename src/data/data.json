@@ -21,7 +21,13 @@
         "S": 2,
         "M": 3,
         "L": 1
-      }
+      },
+      "size_description": [
+        "Chest circumference x Waist circumference x Length",
+        "S - (102cm x 102cm x 81cm)",
+        "M - (106cm x 106cm x 83cm)",
+        "L - (110cm x 110cm x 85cm)"
+      ]
     },
     {
       "product_id": 2,

@@ -5,9 +5,13 @@ import {
   View,
   TouchableOpacity,
   Image,
-  Dimensions
+  Dimensions,
+  ScrollView
 } from 'react-native';
 import { withNavigation } from 'react-navigation';
+import TabNavigator from '../components/TabNavigator';
+import Info from './ProductInfo';
+import Size from './ProductSize';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -16,37 +20,53 @@ function getImageHeight(imageWidth) {
   return (imageWidth * 523) / 392;
 }
 
+let Tabs = TabNavigator({
+  Info,
+  Size
+});
+
 class Product extends Component {
   render() {
     data = this.props.navigation.getParam('data');
     return (
-      <View>
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-            <Icon name="ios-arrow-round-back" size={44} color="#212224" />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Icon name="ios-heart-empty" size={30} color="#212224" />
-          </TouchableOpacity>
-        </View>
-        <Image
-          source={{ uri: data.imageUrl }}
-          style={styles.productImage}
-          resizeMode="contain"
-        />
-        <View style={{ margin: 20 }}>
-          <Text style={styles.productTitle}>{data.name}</Text>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              marginTop: 10
-            }}
-          >
-            <Text style={styles.productPromoPrice}>$ {data.promo_price}</Text>
-            <Text style={styles.productOriPrice}>$ {data.ori_price}</Text>
+      <View style={{ flex: 1 }}>
+        <ScrollView>
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+              <Icon name="ios-arrow-round-back" size={44} color="#212224" />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Icon name="ios-heart-empty" size={30} color="#212224" />
+            </TouchableOpacity>
           </View>
-        </View>
+          <Image
+            source={{ uri: data.imageUrl }}
+            style={styles.productImage}
+            resizeMode="contain"
+          />
+          <View style={{ margin: 20 }}>
+            <Text style={styles.productTitle}>{data.name}</Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginTop: 10
+              }}
+            >
+              <Text style={styles.productPromoPrice}>$ {data.promo_price}</Text>
+              <Text style={styles.productOriPrice}>$ {data.ori_price}</Text>
+            </View>
+          </View>
+          <Text style={styles.productCTA}>ADD TO CART</Text>
+          <Tabs
+            screenProps={{
+              description: data.description,
+              washing_instructions: data.washing_instructions,
+              sizes: data.sizes,
+              size_description: data.size_description
+            }}
+          />
+        </ScrollView>
       </View>
     );
   }
@@ -85,6 +105,23 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textDecorationLine: 'line-through',
     textDecorationStyle: 'solid'
+  },
+  productCTA: {
+    // position: 'absolute',
+    // bottom: 30,
+    // right: 20,
+    // zIndex: 2,
+    alignSelf: 'center',
+    backgroundColor: '#212224',
+    color: 'white',
+    padding: 16,
+    paddingLeft: 28,
+    paddingRight: 28,
+    borderRadius: 10,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 13,
+    marginBottom: 20,
+    marginTop: 10
   }
 });
 
