@@ -35,6 +35,11 @@ class Favourites extends Component {
             <Text style={styles.headerBackTitle}>Favourites</Text>
           </View>
           <View style={styles.searchResultsContainer}>
+            {this.props.favourites.length == 0 ? (
+              <Text style={{ textAlign: 'center', flex: 1 }}>
+                You have no liked items.
+              </Text>
+            ) : null}
             {this.props.favourites.map((productId, index) => {
               return <ProductCard product={data[productId - 1]} key={index} />;
             })}

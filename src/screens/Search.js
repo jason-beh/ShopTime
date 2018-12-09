@@ -15,7 +15,8 @@ let { data } = require('../data/data.json');
 
 export class Search extends Component {
   state = {
-    searchTerm: ''
+    searchTerm: '',
+    searchResults: data
   };
 
   render() {
@@ -45,7 +46,15 @@ export class Search extends Component {
             <TextInput
               style={styles.searchInput}
               placeholder="Product name"
-              onChangeText={searchTerm => this.setState({ searchTerm })}
+              onChangeText={searchTerm => {
+                this.setState({ searchTerm });
+                let results = data.filter(item => {
+                  return item.name
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase());
+                });
+                this.setState({ searchResults: results });
+              }}
             />
             <TouchableOpacity>
               <Icon
@@ -57,19 +66,14 @@ export class Search extends Component {
             </TouchableOpacity>
           </View>
           <Text style={styles.searchResultsText}>
-            {data.length} Items found
+            {this.state.searchResults.length} Items found
             {this.state.searchTerm.length == 0
               ? ''
               : ` for "${this.state.searchTerm}"`}
           </Text>
           <View style={styles.searchResultsContainer}>
-            {data.map((product, index) => {
-              return (
-                <ProductCard
-                  product={product}
-                  key={index}
-                />
-              );
+            {this.state.searchResults.map((product, index) => {
+              return <ProductCard product={product} key={index} />;
             })}
           </View>
         </View>
