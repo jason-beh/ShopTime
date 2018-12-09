@@ -7,7 +7,6 @@ import {
   Dimensions,
   Image
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { withNavigation } from 'react-navigation';
 import { connect } from 'react-redux';
 import { addFavourite } from '../actions/addFavourite';
