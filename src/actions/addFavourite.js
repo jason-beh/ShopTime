@@ -1,6 +1,6 @@
 import { ADD_FAVOURITE } from './types';
 
-export const addFAVOURITE = favourite => {
+export const addFavourite = favourite => {
   return {
     type: ADD_FAVOURITE,
     payload: favourite

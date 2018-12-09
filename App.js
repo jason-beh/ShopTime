@@ -7,6 +7,7 @@ import Brands from './src/screens/Brands.js';
 import AppHeader from './src/components/AppHeader.js';
 import Search from './src/screens/Search.js';
 import Product from './src/screens/Product.js';
+import Favourites from './src/screens/Favourites'
 
 import TabNavigator from './src/components/TabNavigator';
 
@@ -34,13 +35,13 @@ export default createAppContainer(
         screen: Home
       },
       Search: {
-        screen: Search,
-        navigationOptions: {
-          title: 'Search'
-        }
+        screen: Search
       },
       Product: {
         screen: Product
+      },
+      Favourites: {
+        screen: Favourites
       }
     },
     {

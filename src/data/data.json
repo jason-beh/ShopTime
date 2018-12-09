@@ -45,9 +45,12 @@
       "washing_instructions": "Hand Wash",
       "materials": "70% wool, 30% cashmere",
       "imageUrl": "https://res.cloudinary.com/duzwrihzb/image/upload/v1544004493/ShopTime2.png",
-      "sizes": {
-        "M": 2
-      }
+      "size_description": [
+        "Chest circumference x Waist circumference x Length",
+        "S - (102cm x 102cm x 81cm)",
+        "M - (106cm x 106cm x 83cm)",
+        "L - (110cm x 110cm x 85cm)"
+      ]
     }
   ]
 }

@@ -9,6 +9,11 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { withNavigation } from 'react-navigation';
+import { connect } from 'react-redux';
+import { addFavourite } from '../actions/addFavourite';
+import { removeFavourite } from '../actions/removeFavourite';
+
+import FavouriteButton from './FavouriteButton';
 
 let imageWidth = (Dimensions.get('window').width - 40 - 20) / 2;
 function getImageHeight(imageWidth) {
@@ -16,6 +21,10 @@ function getImageHeight(imageWidth) {
 }
 
 class ProductCard extends Component {
+  state = {
+    favourite: this.props.favourites
+  };
+
   render() {
     return (
       <TouchableOpacity
@@ -27,26 +36,38 @@ class ProductCard extends Component {
       >
         <View style={styles.productCard}>
           <Image
-            source={{ uri: this.props.imageUrl }}
+            source={{ uri: this.props.product.imageUrl }}
             style={styles.productCardImage}
           />
           <View style={styles.productCardPriceFavourite}>
-            <Text style={styles.productCardPrice}>$ {this.props.price}</Text>
-            <TouchableOpacity>
-              <Icon
-                name="ios-heart-empty"
-                size={30}
-                color="#212224"
-                style={styles.searchIcon}
-              />
-            </TouchableOpacity>
+            <Text style={styles.productCardPrice}>
+              $ {this.props.product.promo_price}
+            </Text>
+            <FavouriteButton product_id={this.props.product.product_id} />
           </View>
-          <Text style={styles.productCardName}>{this.props.name}</Text>
+          <Text style={styles.productCardName}>{this.props.product.name}</Text>
         </View>
       </TouchableOpacity>
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    favourites: state.favourites.favourites
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addFavourite: favourite => {
+      dispatch(addFavourite(favourite));
+    },
+    removeFavourite: favourite => {
+      dispatch(removeFavourite(favourite));
+    }
+  };
+};
 
 const styles = StyleSheet.create({
   productCard: {
@@ -74,4 +95,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default withNavigation(ProductCard);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withNavigation(ProductCard));

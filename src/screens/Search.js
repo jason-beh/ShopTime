@@ -68,9 +68,6 @@ export class Search extends Component {
                 <ProductCard
                   product={product}
                   key={index}
-                  name={product.name}
-                  imageUrl={product.imageUrl}
-                  price={product.promo_price}
                 />
               );
             })}

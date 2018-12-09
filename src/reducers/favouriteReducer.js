@@ -7,12 +7,18 @@ const initialState = {
 const favouriteReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FAVOURITE:
+      if (state.favourites.indexOf(action.payload) === -1) {
+        return {
+          ...state,
+          favourites: [...state.favourites, action.payload]
+        };
+      } else return state;
+    case REMOVE_FAVOURITE:
       return {
         ...state,
-        favourites: [...state.favourites, action.favourites]
+        favourites: state.favourites.filter(item => item != action.payload)
       };
-    case REMOVE_FAVOURITE:
-      return state.filter(item => item != state[action.favourites])
+
     default:
       return state;
   }

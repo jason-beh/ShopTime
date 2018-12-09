@@ -13,6 +13,8 @@ import TabNavigator from '../components/TabNavigator';
 import Info from './ProductInfo';
 import Size from './ProductSize';
 
+import FavouriteButton from '../components/FavouriteButton';
+
 import Icon from 'react-native-vector-icons/Ionicons';
 
 let imageWidth = Dimensions.get('window').width;
@@ -35,9 +37,7 @@ class Product extends Component {
             <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
               <Icon name="ios-arrow-round-back" size={44} color="#212224" />
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Icon name="ios-heart-empty" size={30} color="#212224" />
-            </TouchableOpacity>
+            <FavouriteButton product_id={data.product_id} />
           </View>
           <Image
             source={{ uri: data.imageUrl }}
