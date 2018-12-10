@@ -16,7 +16,7 @@
       ],
       "washing_instructions": "Cold Hand Wash for preserving its optimum condition",
       "materials": "100% Cotton",
-      "imageUrl": "https://res.cloudinary.com/duzwrihzb/image/upload/v1544004396/ShopTime1.png",
+      "imageUrl": "https://res.cloudinary.com/duzwrihzb/image/upload/w_500/v1544004396/ShopTime1.png",
       "sizes": {
         "S": 2,
         "M": 3,
@@ -33,26 +33,345 @@
       "product_id": 2,
       "isNewItem": false,
       "gender": "women",
-      "type": "hat",
-      "name": "Black Beanie",
-      "promo_price": 29.99,
-      "ori_price": 39.99,
+      "type": "Jacket",
+      "name": "Overlap Structured Jacket",
+      "promo_price": 154.99,
+      "ori_price": 184.99,
       "description": [
-        "A warm wool cashmere beanie",
-        "Made using high quality wool",
-        "Solid black color"
+        "Structured jacket with visible zippered pockets",
+        "V neckline",
+        "Zip fastening",
+        "Lined"
       ],
-      "washing_instructions": "Hand Wash",
-      "materials": "70% wool, 30% cashmere",
-      "imageUrl": "https://res.cloudinary.com/duzwrihzb/image/upload/v1544004493/ShopTime2.png",
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "100% polyester",
+      "imageUrl": "https://dynamic.zacdn.com/2vVm1yl-9GY_vDke-fC8In6Hh9M=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/zalora-5446-7122241-1.jpg",
       "sizes": {
-        "M": 2
+        "XS": 3,
+        "S": 1,
+        "M": 10
+      },
+      "size_description": [
+        "Shoulder Length x Sleeve Length x Bust circumference x Waist circumference x Length",
+        "XS - (36.5cm x 75.3cm x 81cm x 72cm x 59.5cm)",
+        "S - (38cm x 77cm x 86cm x 77cm x 61cm)",
+        "M - (39.5cm x 78.8cm x 91cm x 82cm x 62.5cm)"
+      ]
+    },
+    {
+      "product_id": 3,
+      "isNewItem": true,
+      "gender": "women",
+      "type": "top",
+      "name": "Basic Jersey Polo Neck Long Sleeve Top",
+      "promo_price": 44.99,
+      "ori_price": 84.99,
+      "description": [
+        "High neckline",
+        "Slim fit",
+        "Solid tone long sleeve top "
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "95% Rayon 5% Spandex",
+      "imageUrl": "https://res.cloudinary.com/duzwrihzb/image/upload/w_700/v1544428092/ShopTime3.jpg",
+      "sizes": {
+        "S": 4,
+        "M": 2,
+        "L": 1
+      },
+      "size_description": [
+        "Bust circumference x Waist circumference x Length",
+        "XS - (75cm x 68cm x 56.5cm)",
+        "S - (80cm x 73cm x 58cm)",
+        "M - (85cm x 78cm x 59.5cm)"
+      ]
+    },
+    {
+      "product_id": 4,
+      "isNewItem": true,
+      "gender": "women",
+      "type": "dress",
+      "name": "Mix Material Dress",
+      "promo_price": 49.99,
+      "ori_price": 95.99,
+      "description": [
+        "Floral printed mini dress",
+        "Round neckline",
+        "1 pocket",
+        "Polyblend"
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "96% Polyester, 4% Spandex",
+      "imageUrl": "https://dynamic.zacdn.com/CRLrSasI5VN9a-SmGTGgcEAK_U0=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/zalora-4712-7091741-4.jpg",
+      "sizes": {
+        "S": 3,
+        "M": 6,
+        "L": 2,
+        "XL": 2
+      },
+      "size_description": [
+        "Sleeve Length x Bust circumference x Waist circumference x Hip circumference x Length",
+        "S - (22cm x 100cm x 92cm x 108cm x 89cm)",
+        "M - (23cm x 105cm x 97cm x 113cm x 91.5cm)",
+        "L - (24cm x 111cm x 103cm x 119cm x 94cm)",
+        "XL - (25cm x 117cm x 109cm x 125cm x 96.5cm)"
+      ]
+    },
+    {
+      "product_id": 5,
+      "isNewItem": true,
+      "gender": "women",
+      "type": "dress",
+      "name": "Cold Shoulder Lace Dress",
+      "promo_price": 134.99,
+      "ori_price": 149.99,
+      "description": [
+        "Midi dress features lace frill detailing at cold shoulder sleeves and drop hem",
+        "Concealed zip fastening along back",
+        "Material is highly stretchable"
+      ],
+      "washing_instructions": "Machine Cold Wash with similar colours",
+      "materials": "95% Polyester 5% Elastane 60% Cotton 40% Nylon",
+      "imageUrl": "https://dynamic.zacdn.com/3ofqE6TaRGO1IFNk4t_JQIYCrdY=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/nichii-3923-4788941-1.jpg",
+      "sizes": {
+        "S": 2,
+        "M": 1,
+        "L": 3
+      },
+      "size_description": [
+        "Bust circumference x Waist circumference x Hip circumference",
+        "S - (32inch x 26inch x 34inch)",
+        "M - (33.5inch x 27.5inch x 35.5inch)",
+        "L - (35.5inch x 29.5inch x 37.5inch)"
+      ]
+    },
+    {
+      "product_id": 6,
+      "isNewItem": false,
+      "gender": "women",
+      "type": "dress",
+      "name": "Forever New Stephanie Lace Dress",
+      "promo_price": 179.99,
+      "ori_price": 219.99,
+      "description": [
+        "Ruffle hem lace dress",
+        "Round neckline",
+        "Zip fastening",
+        "Regular fit"
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "45% Viscose, 29% Cotton, 26% Nylon",
+      "imageUrl": "https://dynamic.zacdn.com/KV6aFeQtIxZdfDPKkHBOebHShtg=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/forever-new-0950-5808941-1.jpg",
+      "sizes": {
+        "S": 5,
+        "M": 9,
+        "L": 2
+      },
+      "size_description": [
+        "Sleeve Length x Bust circumference x Waist circumference x Hip",
+        "S - (26cm x 80cm x 70cm x 88cm x 93cm)",
+        "M - (27cm x 84cm x 74cm x 92cm x 95cm)",
+        "L - (27cm x 90cm x 78cm x 98cm x 95cm)"
+      ]
+    },
+    {
+      "product_id": 7,
+      "isNewItem": false,
+      "gender": "women",
+      "type": "top",
+      "name": "Forever New Dakota 2-In-1 Lace Top",
+      "promo_price": 209.99,
+      "ori_price": 279.99,
+      "description": [
+        "Layered style lace long sleeve top",
+        "Back split detail",
+        "Button fastening",
+        "Regular fit"
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "40% Cotton, 34% Nylon, 26% Viscose",
+      "imageUrl": "https://dynamic.zacdn.com/9RaJ-zjV14eZVagxNQhPeRNsSKg=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/forever-new-1993-4922351-1.jpg",
+      "sizes": {
+        "XS": 7,
+        "S": 5,
+        "M": 3,
+        "L": 2
+      },
+      "size_description": [
+        "Bust circumference x Waist circumference x Length",
+        "XS - (86cm x 88cm x 60cm)",
+        "S - (90cm x 90cm x 64cm)",
+        "M - (94cm x 92cm x 64cm)",
+        "L - (96cm x 96cm x 65cm)"
+      ]
+    },
+    {
+      "product_id": 8,
+      "isNewItem": true,
+      "gender": "women",
+      "type": "top",
+      "name": "Abstract Print Ruffle Sleeves Top",
+      "promo_price": 99.99,
+      "ori_price": 71.99,
+      "description": [
+        "Floral print ruffle sleeve top",
+        "Round neckline",
+        "Back Button fastening",
+        "Regular fit"
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "100% Polyester",
+      "imageUrl": "https://dynamic.zacdn.com/-CE86DBZnRbISzVJMEaxUe8Ld0U=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/zalora-0302-0761741-1.jpg",
+      "sizes": {
+        "XS": 7,
+        "S": 5,
+        "M": 3,
+        "L": 2
+      },
+      "size_description": [
+        "Bust circumference x Waist circumference x Length",
+        "XS - (85cm x 88cm x 57.5cm)",
+        "S - (90cm x 93cm x 59cm)",
+        "M - (95cm x 98cm x 60.5cm)",
+        "L - (101cm x 104cm x 62cm)"
+      ]
+    },
+    {
+      "product_id": 9,
+      "isNewItem": true,
+      "gender": "men",
+      "type": "jacket",
+      "name": "Chocolate Suedette Bomber Jacket",
+      "promo_price": 99.99,
+      "ori_price": 119.99,
+      "description": ["2 pockets", "Zip fastening", "Regular fit"],
+      "washing_instructions": "Dry clean only",
+      "materials": "100% Polyester",
+      "imageUrl": "https://dynamic.zacdn.com/Zjz_ayJc1jxvu9Eah8mRL3bW7zQ=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/burton-menswear-london-8281-9216051-1.jpg",
+      "sizes": {
+        "S": 5,
+        "M": 3,
+        "L": 2
+      },
+      "size_description": [
+        "Shoulder Length x Sleeve Length x Chest circumference x Waist circumference x Length",
+        "S - (43cm x 87cm x 106cm x 102cm x 67cm)",
+        "M - (44cm x 88cm x 110cm x 108cm x 67cm)",
+        "L - (47cm x 88cm x 118cm x 120cm x 68cm)"
+      ]
+    },
+    {
+      "product_id": 10,
+      "isNewItem": true,
+      "gender": "men",
+      "type": "Top",
+      "name": "As M Nike Dry Df Brnd Mk Aop Tee",
+      "promo_price": 99.99,
+      "ori_price": 109.99,
+      "description": [
+        "Best for running",
+        "Short sleeve all over brand print running tee",
+        "Slip on style",
+        "Regular fit"
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "60% Cotton, 40% Polyester",
+      "imageUrl": "https://dynamic.zacdn.com/iMcwErp3NLaN4xp089mv__NT3eg=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/nike-8280-4132051-1.jpg",
+      "sizes": {
+        "S": 3,
+        "M": 3,
+        "L": 1
       },
       "size_description": [
         "Chest circumference x Waist circumference x Length",
-        "S - (102cm x 102cm x 81cm)",
-        "M - (106cm x 106cm x 83cm)",
-        "L - (110cm x 110cm x 85cm)"
+        "S - (98cm x 94cm x 67cm)",
+        "M - (102cm x 98cm x 69cm)",
+        "L - (106cm x 102cm x 71cm)"
+      ]
+    },
+    {
+      "product_id": 11,
+      "isNewItem": true,
+      "gender": "men",
+      "type": "Top",
+      "name": "Bl Top Crew Neck S/S Ceramicool",
+      "promo_price": 81.99,
+      "ori_price": 99.99,
+      "description": [
+        "Duo toned tee with ceramicool tech",
+        "Crew neckline",
+        "Reflective print",
+        "Regular fit"
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "86% Polyester, 14% Elasthan",
+      "imageUrl": "https://dynamic.zacdn.com/W8MEWdOc4nmyq3445Jn999Avcgs=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/odlo-4217-4566541-1.jpg",
+      "sizes": {
+        "S": 9,
+        "M": 10,
+        "L": 4
+      },
+      "size_description": [
+        "Chest circumference x Waist circumference x Length",
+        "S - (100cm x 94cm x 70cm)",
+        "M - (100cm x 96cm x 71cm)",
+        "L - (104cm x 100cm x 73cm)"
+      ]
+    },
+    {
+      "product_id": 12,
+      "isNewItem": true,
+      "gender": "men",
+      "type": "Top",
+      "name": "Long Sleeve Core Oxford Solid Shirt",
+      "promo_price": 109.99,
+      "ori_price": 199.99,
+      "description": [
+        "Solid coloured oxford shirt",
+        "Collared neckline",
+        "1 chest pocket"
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "97% Cotton, 3% Elastane",
+      "imageUrl": "https://dynamic.zacdn.com/pKj3zP7LuO-XLVT-Lty1JJg4ygU=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/hollister-6630-0728841-1.jpg",
+      "sizes": {
+        "S": 6,
+        "M": 9,
+        "L": 5
+      },
+      "size_description": [
+        "Shoulder Length x Sleeve Length x Chest circumference x Waist circumference x Length",
+        "S - (45cm x 87cm x 106cm x 104cm x 71cm)",
+        "M - (47cm x 89cm x 110cm x 108cm x 73cm)",
+        "L - (49cm x 91cm x 114cm x 112cm x 75cm)"
+      ]
+    },
+    {
+      "product_id": 13,
+      "isNewItem": true,
+      "gender": "men",
+      "type": "top",
+      "name": "Logo Ombre T-Shirt",
+      "promo_price": 49.99,
+      "ori_price": 89.99,
+      "description": [
+        "Brand logo gradient fade long sleeves tee",
+        "Round neckline",
+        "Cotton Top"
+      ],
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "100% Cotton",
+      "imageUrl": "https://dynamic.zacdn.com/4aL5t3CztisbdCpyFY5ZvrN8dC0=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/hollister-8967-2984051-1.jpg",
+      "sizes": {
+        "S": 3,
+        "M": 2,
+        "L": 5
+      },
+      "size_description": [
+        "Chest circumference x Waist circumference x Length",
+        "S - (104cm x 100cm x 73cm)",
+        "M - (108cm x 104cm x 75cm)",
+        "L - (112cm x 108cm x 77cm)"
       ]
     }
   ]

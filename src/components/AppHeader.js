@@ -36,15 +36,13 @@ export class AppHeader extends Component {
           </Picker>
         </View>
         <View style={styles.headerColumn}>
-          <TouchableOpacity onPress={() => { this.props.navigation.navigate('Favourites') }}>
+          <TouchableOpacity
+            onPress={() => {
+              this.props.navigation.navigate('Favourites');
+            }}
+          >
             <Icon name="ios-heart-empty" size={26} color="#212224" />
           </TouchableOpacity>
-          <Icon
-            name="ios-cart"
-            size={26}
-            color="#212224"
-            style={styles.cartIcon}
-          />
           <TouchableOpacity
             onPress={() => this.props.navigation.navigate('Search')}
           >

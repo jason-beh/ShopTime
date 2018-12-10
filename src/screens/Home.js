@@ -82,7 +82,6 @@ export class Home extends Component {
               />
             </View>
           </ScrollView>
-          <Icon name="ios-cart" color="#212224" style={styles.cartButton} />
         </View>
       );
     }
@@ -123,19 +122,6 @@ const styles = StyleSheet.create({
   },
   imagePromoRight: {
     marginLeft: marginContainer / 2
-  },
-  cartButton: {
-    fontSize: 36,
-    position: 'absolute',
-    zIndex: 2,
-    backgroundColor: '#0070D6',
-    color: 'white',
-    padding: 16,
-    borderRadius: 50,
-    bottom: 30,
-    right: 20,
-    width: 64,
-    height: 64
   }
 });
 

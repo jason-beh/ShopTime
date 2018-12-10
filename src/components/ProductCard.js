@@ -44,7 +44,11 @@ class ProductCard extends Component {
             </Text>
             <FavouriteButton product_id={this.props.product.product_id} />
           </View>
-          <Text style={styles.productCardName}>{this.props.product.name}</Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+            <Text style={styles.productCardName}>
+              {this.props.product.name}
+            </Text>
+          </View>
         </View>
       </TouchableOpacity>
     );
@@ -70,7 +74,8 @@ const mapDispatchToProps = dispatch => {
 
 const styles = StyleSheet.create({
   productCard: {
-    marginTop: 30
+    marginTop: 30,
+    flex: 1
   },
   productCardImage: {
     width: imageWidth,
@@ -90,7 +95,10 @@ const styles = StyleSheet.create({
   productCardName: {
     fontFamily: 'Montserrat-Regular',
     fontSize: 16,
-    marginTop: 5
+    marginTop: 5,
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    flex: 1
   }
 });
 

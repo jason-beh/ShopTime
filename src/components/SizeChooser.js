@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View, TouchableOpacity, Alert } from 'react-native';
 
 export default class SizeChooser extends Component {
   state = {
-    sizeChosen: '',
+    sizeChosen: 'S',
     sizes: this.props.sizes
   };
 
   render() {
     return (
       <View>
+        <Text
+          style={{
+            fontFamily: 'Montserrat-Medium',
+            marginTop: 40,
+            textAlign: 'center'
+          }}
+        >
+          Choose your size:
+        </Text>
         <View
           style={{
-            marginTop: 30,
+            marginTop: 20,
             justifyContent: 'space-around',
             flexDirection: 'row'
           }}
@@ -52,9 +61,18 @@ export default class SizeChooser extends Component {
             }
           })}
         </View>
-        <View>
+        <TouchableOpacity
+          onPress={() => {
+            Alert.alert(
+              `${this.props.productName} (${
+                this.state.sizeChosen
+              }) has been added to cart.`,
+              `(Note: there is no actual cart in this project)`
+            );
+          }}
+        >
           <Text style={styles.productCTA}>ADD TO CART</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     );
   }

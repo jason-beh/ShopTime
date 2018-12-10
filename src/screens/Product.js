@@ -20,7 +20,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 let imageWidth = Dimensions.get('window').width;
 function getImageHeight(imageWidth) {
-  return (imageWidth * 523) / 392;
+  return (imageWidth * 1100) / 762;
 }
 
 let Tabs = TabNavigator({
@@ -43,7 +43,7 @@ class Product extends Component {
           <Image
             source={{ uri: data.imageUrl }}
             style={styles.productImage}
-            resizeMode="contain"
+            resizeMode="cover"
           />
           <View style={{ margin: 20 }}>
             <Text style={styles.productTitle}>{data.name}</Text>
@@ -57,7 +57,7 @@ class Product extends Component {
               <Text style={styles.productPromoPrice}>$ {data.promo_price}</Text>
               <Text style={styles.productOriPrice}>$ {data.ori_price}</Text>
             </View>
-            <SizeChooser sizes={data.sizes} />
+            <SizeChooser sizes={data.sizes} productName={data.name} />
           </View>
           <Tabs
             screenProps={{
