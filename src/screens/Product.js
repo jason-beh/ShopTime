@@ -11,7 +11,8 @@ import {
 import { withNavigation } from 'react-navigation';
 import TabNavigator from '../components/TabNavigator';
 import Info from './ProductInfo';
-import Size from './ProductSize';
+import Measurements from './ProductSize';
+import SizeChooser from '../components/SizeChooser';
 
 import FavouriteButton from '../components/FavouriteButton';
 
@@ -24,7 +25,7 @@ function getImageHeight(imageWidth) {
 
 let Tabs = TabNavigator({
   Info,
-  Size
+  Measurements
 });
 
 class Product extends Component {
@@ -56,8 +57,8 @@ class Product extends Component {
               <Text style={styles.productPromoPrice}>$ {data.promo_price}</Text>
               <Text style={styles.productOriPrice}>$ {data.ori_price}</Text>
             </View>
+            <SizeChooser sizes={data.sizes} />
           </View>
-          <Text style={styles.productCTA}>ADD TO CART</Text>
           <Tabs
             screenProps={{
               description: data.description,
@@ -105,23 +106,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textDecorationLine: 'line-through',
     textDecorationStyle: 'solid'
-  },
-  productCTA: {
-    // position: 'absolute',
-    // bottom: 30,
-    // right: 20,
-    // zIndex: 2,
-    alignSelf: 'center',
-    backgroundColor: '#212224',
-    color: 'white',
-    padding: 16,
-    paddingLeft: 28,
-    paddingRight: 28,
-    borderRadius: 10,
-    fontFamily: 'Montserrat-Bold',
-    fontSize: 13,
-    marginBottom: 20,
-    marginTop: 10
   }
 });
 
