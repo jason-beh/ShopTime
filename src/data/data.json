@@ -3,6 +3,7 @@
     {
       "product_id": 1,
       "isNewItem": false,
+      "isFeatured": false,
       "gender": "women",
       "type": "top",
       "name": "Gray Cotton Blouse",
@@ -32,6 +33,7 @@
     {
       "product_id": 2,
       "isNewItem": false,
+      "isFeatured": false,
       "gender": "women",
       "type": "Jacket",
       "name": "Overlap Structured Jacket",
@@ -61,6 +63,7 @@
     {
       "product_id": 3,
       "isNewItem": true,
+      "isFeatured": false,
       "gender": "women",
       "type": "top",
       "name": "Basic Jersey Polo Neck Long Sleeve Top",
@@ -89,6 +92,7 @@
     {
       "product_id": 4,
       "isNewItem": true,
+      "isFeatured": false,
       "gender": "women",
       "type": "dress",
       "name": "Mix Material Dress",
@@ -120,34 +124,40 @@
     {
       "product_id": 5,
       "isNewItem": true,
+      "isFeatured": true,
       "gender": "women",
-      "type": "dress",
-      "name": "Cold Shoulder Lace Dress",
-      "promo_price": 134.99,
-      "ori_price": 149.99,
+      "type": "top",
+      "name": "Abstract Print Ruffle Sleeves Top",
+      "promo_price": 99.99,
+      "ori_price": 71.99,
       "description": [
-        "Midi dress features lace frill detailing at cold shoulder sleeves and drop hem",
-        "Concealed zip fastening along back",
-        "Material is highly stretchable"
+        "Floral print ruffle sleeve top",
+        "Round neckline",
+        "Back Button fastening",
+        "Regular fit"
       ],
-      "washing_instructions": "Machine Cold Wash with similar colours",
-      "materials": "95% Polyester 5% Elastane 60% Cotton 40% Nylon",
-      "imageUrl": "https://dynamic.zacdn.com/3ofqE6TaRGO1IFNk4t_JQIYCrdY=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/nichii-3923-4788941-1.jpg",
+      "washing_instructions": "Machine Cold Wash",
+      "materials": "100% Polyester",
+      "imageUrl": "https://dynamic.zacdn.com/-CE86DBZnRbISzVJMEaxUe8Ld0U=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/zalora-0302-0761741-1.jpg",
       "sizes": {
-        "S": 2,
-        "M": 1,
-        "L": 3
+        "XS": 7,
+        "S": 5,
+        "M": 3,
+        "L": 2
       },
       "size_description": [
-        "Bust circumference x Waist circumference x Hip circumference",
-        "S - (32inch x 26inch x 34inch)",
-        "M - (33.5inch x 27.5inch x 35.5inch)",
-        "L - (35.5inch x 29.5inch x 37.5inch)"
+        "Bust circumference x Waist circumference x Length",
+        "XS - (85cm x 88cm x 57.5cm)",
+        "S - (90cm x 93cm x 59cm)",
+        "M - (95cm x 98cm x 60.5cm)",
+        "L - (101cm x 104cm x 62cm)"
       ]
     },
+
     {
       "product_id": 6,
       "isNewItem": false,
+      "isFeatured": false,
       "gender": "women",
       "type": "dress",
       "name": "Forever New Stephanie Lace Dress",
@@ -176,7 +186,37 @@
     },
     {
       "product_id": 7,
+      "isNewItem": true,
+      "isFeatured": true,
+      "gender": "women",
+      "type": "dress",
+      "name": "Cold Shoulder Lace Dress",
+      "promo_price": 134.99,
+      "ori_price": 149.99,
+      "description": [
+        "Midi dress features lace frill detailing at cold shoulder sleeves and drop hem",
+        "Concealed zip fastening along back",
+        "Material is highly stretchable"
+      ],
+      "washing_instructions": "Machine Cold Wash with similar colours",
+      "materials": "95% Polyester 5% Elastane 60% Cotton 40% Nylon",
+      "imageUrl": "https://dynamic.zacdn.com/3ofqE6TaRGO1IFNk4t_JQIYCrdY=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/nichii-3923-4788941-1.jpg",
+      "sizes": {
+        "S": 2,
+        "M": 1,
+        "L": 3
+      },
+      "size_description": [
+        "Bust circumference x Waist circumference x Hip circumference",
+        "S - (32inch x 26inch x 34inch)",
+        "M - (33.5inch x 27.5inch x 35.5inch)",
+        "L - (35.5inch x 29.5inch x 37.5inch)"
+      ]
+    },
+    {
+      "product_id": 8,
       "isNewItem": false,
+      "isFeatured": true,
       "gender": "women",
       "type": "top",
       "name": "Forever New Dakota 2-In-1 Lace Top",
@@ -206,39 +246,9 @@
       ]
     },
     {
-      "product_id": 8,
-      "isNewItem": true,
-      "gender": "women",
-      "type": "top",
-      "name": "Abstract Print Ruffle Sleeves Top",
-      "promo_price": 99.99,
-      "ori_price": 71.99,
-      "description": [
-        "Floral print ruffle sleeve top",
-        "Round neckline",
-        "Back Button fastening",
-        "Regular fit"
-      ],
-      "washing_instructions": "Machine Cold Wash",
-      "materials": "100% Polyester",
-      "imageUrl": "https://dynamic.zacdn.com/-CE86DBZnRbISzVJMEaxUe8Ld0U=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.my.zalora.net/p/zalora-0302-0761741-1.jpg",
-      "sizes": {
-        "XS": 7,
-        "S": 5,
-        "M": 3,
-        "L": 2
-      },
-      "size_description": [
-        "Bust circumference x Waist circumference x Length",
-        "XS - (85cm x 88cm x 57.5cm)",
-        "S - (90cm x 93cm x 59cm)",
-        "M - (95cm x 98cm x 60.5cm)",
-        "L - (101cm x 104cm x 62cm)"
-      ]
-    },
-    {
       "product_id": 9,
       "isNewItem": true,
+      "isFeatured": false,
       "gender": "men",
       "type": "jacket",
       "name": "Chocolate Suedette Bomber Jacket",
@@ -263,10 +273,11 @@
     {
       "product_id": 10,
       "isNewItem": true,
+      "isFeatured": true,
       "gender": "men",
       "type": "Top",
       "name": "As M Nike Dry Df Brnd Mk Aop Tee",
-      "promo_price": 99.99,
+      "promo_price": 89.99,
       "ori_price": 109.99,
       "description": [
         "Best for running",
@@ -292,6 +303,7 @@
     {
       "product_id": 11,
       "isNewItem": true,
+      "isFeatured": true,
       "gender": "men",
       "type": "Top",
       "name": "Bl Top Crew Neck S/S Ceramicool",
@@ -321,6 +333,7 @@
     {
       "product_id": 12,
       "isNewItem": true,
+      "isFeatured": false,
       "gender": "men",
       "type": "Top",
       "name": "Long Sleeve Core Oxford Solid Shirt",
@@ -349,6 +362,7 @@
     {
       "product_id": 13,
       "isNewItem": true,
+      "isFeatured": true,
       "gender": "men",
       "type": "top",
       "name": "Logo Ombre T-Shirt",

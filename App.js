@@ -1,18 +1,21 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
-import Featured from './src/screens/Home.js';
+import Featured from './src/screens/Featured.js';
 import Categories from './src/screens/Categories.js';
 import Brands from './src/screens/Brands.js';
 import AppHeader from './src/components/AppHeader.js';
 import Search from './src/screens/Search.js';
 import Product from './src/screens/Product.js';
-import Favourites from './src/screens/Favourites'
+import Favourites from './src/screens/Favourites';
+import FeaturedNavigator from './src/screens/FeaturedNavigator.js';
 
 import TabNavigator from './src/components/TabNavigator';
 
 let Tabs = TabNavigator({
-  Featured,
+  Featured: {
+    screen: FeaturedNavigator
+  },
   Categories,
   Brands
 });
